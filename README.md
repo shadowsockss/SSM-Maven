@@ -436,4 +436,4 @@ showUser.jsp
 
 输入地址：http://localhost/user/jsontype/2
 
-github格式问题，更详细的配置请参考：http://www.cnblogs.com/zyw-205520/p/4771253.html
+github排版问题，更详细的配置请参考：http://www.cnblogs.com/zyw-205520/p/4771253.html
