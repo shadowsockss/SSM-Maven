@@ -72,7 +72,7 @@ log4j.appender.File = org.apache.log4j.RollingFileAppender
 log4j.appender.File.File = logs/ssm.log  
 #定义文件最大大小  
 log4j.appender.File.MaxFileSize = 10MB  
-## 输出所有日志，如果换成DEBUG表示输出DEBUG以上级别日志  
+ 输出所有日志，如果换成DEBUG表示输出DEBUG以上级别日志  
 log4j.appender.File.Threshold = ALL  
 log4j.appender.File.layout = org.apache.log4j.PatternLayout  
 log4j.appender.File.layout.ConversionPattern =[%p] [%d{yyyy-MM-dd HH\:mm\:ss}][%c]%m%n
@@ -92,7 +92,7 @@ log4j.appender.File.layout.ConversionPattern =[%p] [%d{yyyy-MM-dd HH\:mm\:ss}][%
 
 jdbc.properties（文件编码修改为utf-8）
 
-复制代码
+
 driver=com.mysql.jdbc.Driver
 url=jdbc:mysql://localhost:3306/maven
 username=root
@@ -156,7 +156,7 @@ INSERT INTO `user_t` VALUES ('2', 'javen', '123', '10');
 
 IUserService.jave
 
-复制代码
+
 package com.javen.service;  
 
 import com.javen.model.User;
@@ -165,10 +165,10 @@ import com.javen.model.User;
 public interface IUserService {  
     public User getUserById(int userId);  
 }  
-复制代码
+
 UserServiceImpl.java
 
-复制代码
+
 package com.javen.service.impl;
 import javax.annotation.Resource;  
 
@@ -189,7 +189,7 @@ public class UserServiceImpl implements IUserService {
     }  
   
 }  
-复制代码
+
  
 
  
@@ -202,7 +202,7 @@ public class UserServiceImpl implements IUserService {
 
  
 
-复制代码
+
 package com.javen.testmybatis;
 
 import javax.annotation.Resource;  
@@ -239,7 +239,7 @@ public class TestMyBatis {
         logger.info(JSON.toJSONString(user));  
     }  
 }  
-复制代码
+
 测试结果 
 
 
@@ -252,7 +252,7 @@ UserController.java  控制器
 
  
 
-复制代码
+
 package com.javen.controller;
 import java.io.File;
 import java.io.IOException;
@@ -376,14 +376,14 @@ public class UserController {
         return "succes";
     }
 }  
-复制代码
+
  
 
 3.4.6、新建jsp页面
 
 file.jsp
 
-复制代码
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -401,7 +401,7 @@ file.jsp
     </form>
 </body>
 </html>
-复制代码
+
 index.jsp
 
 <html>
@@ -411,7 +411,7 @@ index.jsp
 </html>
 showUser.jsp
 
-复制代码
+
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>  
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 <html>  
@@ -423,7 +423,7 @@ showUser.jsp
     ${user.userName}  
   </body>  
 </html>  
-复制代码
+
  
 
 至此，完成Spring+SpingMVC+mybatis这三大框架整合完成。
